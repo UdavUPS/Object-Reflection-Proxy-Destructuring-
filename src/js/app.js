@@ -1,11 +1,11 @@
 // TODO: write your code here
-import sum from './basic';
+/* import sum from './basic';
 
 console.log('worked');
 
-console.log(sum([1, 2]));
+console.log(sum([1, 2])); */
 
-function showSpecialAttack (obj) {
+export default function showSpecialAttack (obj) {
     const specials = obj.special;
     const mas =[];
 
