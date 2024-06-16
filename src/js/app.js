@@ -4,3 +4,22 @@ import sum from './basic';
 console.log('worked');
 
 console.log(sum([1, 2]));
+
+function showSpecialAttack (obj) {
+    const specials = obj.special;
+    const mas =[];
+
+    for (const attack of specials) {
+        mas.push(attack['id']);
+        mas.push(attack['name']);
+        if (attack.hasOwnProperty('description')) {
+            mas.push(attack['description'])
+        } else {
+            mas.push('Описание недоступно')
+        }
+        mas.push(attack['icon']);
+    }
+
+
+    return mas;
+}
