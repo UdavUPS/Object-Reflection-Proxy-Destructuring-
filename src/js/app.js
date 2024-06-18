@@ -10,16 +10,9 @@ export default function showSpecialAttack (obj) {
     const mas =[];
 
     for (const attack of specials) {
-        mas.push(attack['id']);
-        mas.push(attack['name']);
-        if (attack.hasOwnProperty('description')) {
-            mas.push(attack['description'])
-        } else {
-            mas.push('Описание недоступно')
-        }
-        mas.push(attack['icon']);
+         let {id, name, description = 'Описание недоступно', icon} = attack;
+         mas.push(id, name, description, icon);
+         
     }
-
-
     return mas;
 }
