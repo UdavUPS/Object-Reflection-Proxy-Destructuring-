@@ -24,7 +24,20 @@ test('Attack array', () => {
         ]	
       }
 
-      const mas = [8, 'Двойной выстрел', 'Двойной выстрел наносит двойной урон', 'http://...', 9, 'Нокаутирующий удар', 'Описание недоступно', 'http://...'];
+      const mas = [
+        {
+          id: 8,
+          name: 'Двойной выстрел',
+          description: 'Двойной выстрел наносит двойной урон',
+          icon: 'http://...',
+        }, 
+        {
+          id: 9,
+          name: 'Нокаутирующий удар',
+          description: 'Описание недоступно',
+          icon: 'http://...'
+        }
+      ];
       const result = showSpecialAttack(character);
       
       expect(result).toEqual(mas);

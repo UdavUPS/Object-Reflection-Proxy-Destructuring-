@@ -11,7 +11,11 @@ export default function showSpecialAttack (obj) {
 
     for (const attack of specials) {
          let {id, name, description = 'Описание недоступно', icon} = attack;
-         mas.push(id, name, description, icon);
+         mas.push(
+            { id: id,
+            name: name,
+            description: description,
+            icon: icon });
          
     }
     return mas;
